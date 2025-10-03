@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #paragraf {
+            width: 600px;
+            height: 80px;
+            background-color: pink;
+            line-height: 80px;
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("#paragraf").click(function() {
+                $("#paragraf").css("color", "white");
+            });
+
+            
+            $("#paragraf").mouseover(function() {
+                $("#paragraf").css("background-color", "silver");
+            });
+
+            
+            $("#paragraf").mouseout(function() {
+                $("#paragraf").css("background-color", "blue");
+            });
+
+            
+            $("#paragraf").dblclick(function() {
+                $("#paragraf").css("border", "solid 3px black");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="paragraf">Praktikum Minggu Ke-4 JQuery</p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Praktikum 4 - Events</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // mouseover = saat kursor di atas elemen
+      $("#kotak").mouseover(function(){
+        $(this).css("background","yellow");
+      });
+
+      // mouseout = saat kursor keluar dari elemen
+      $("#kotak").mouseout(function(){
+        $(this).css("background","green");
+      });
+
+      // click = saat diklik sekali
+      $("#kotak").click(function(){
+        $(this).css("background","red");
+      });
+
+      // double click = saat diklik dua kali
+      $("#kotak").dblclick(function(){
+        $(this).css("background","blue");
+      });
+    });
+  </script>
+  <style>
+    #kotak {
+      width: 200px;
+      height: 200px;
+      background: green;
+      border: 2px solid black;
+      margin: 30px;
+      text-align: center;
+      line-height: 200px;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="kotak">Kotak Event</div>
+</body>
+</html>
+
